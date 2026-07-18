@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>挑战HTML的格式发展史</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:"Microsoft YaHei",sans-serif;
+    background:#f4f6f9;
+    color:#333;
+    line-height:1.8;
+}
+
+header{
+    background:linear-gradient(135deg,#0066cc,#00a6ff);
+    color:white;
+    padding:60px 30px;
+    text-align:center;
+}
+
+header h1{
+    font-size:42px;
+}
+
+header p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+.timeline{
+    width:1000px;
+    max-width:95%;
+    margin:auto;
+    position:relative;
+    padding:50px 0;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    width:5px;
+    height:100%;
+    background:#0d6efd;
+    transform:translateX(-50%);
+}
+
+.event{
+    width:46%;
+    background:white;
+    margin:30px 0;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    position:relative;
+}
+
+.event:nth-child(odd){
+    margin-left:auto;
+}
+
+.event::after{
+    content:"";
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#0d6efd;
+    position:absolute;
+    top:35px;
+}
+
+.event:nth-child(even)::after{
+    right:-50px;
+}
+
+.event:nth-child(odd)::after{
+    left:-50px;
+}
+
+.year{
+    color:#0d6efd;
+    font-size:28px;
+    font-weight:bold;
+}
+
+h2{
+    margin:8px 0;
+}
+
+.tag{
+    display:inline-block;
+    padding:5px 10px;
+    margin:5px 5px 10px 0;
+    border-radius:20px;
+    background:#eef5ff;
+    color:#0066cc;
+    font-size:13px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:40px;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:12px;
+}
+
+th{
+    background:#0d6efd;
+    color:white;
+}
+
+footer{
+    margin-top:60px;
+    background:#222;
+    color:white;
+    padding:40px;
+}
+
+code{
+    background:#eee;
+    padding:2px 5px;
+    border-radius:4px;
+}
+
+.highlight{
+    background:#fff3cd;
+    border-left:5px solid orange;
+    padding:20px;
+    margin:30px 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>互联网发展史：谁曾挑战 HTML？</h1>
+
+<p>
+HTML 自1991年诞生以来，一直是 Web 的基础描述语言。
+几十年来，不断有新的格式、平台和技术试图取代 HTML，
+但最终 HTML 演化为了 HTML5，并成为互联网事实标准。
+</p>
+
+</header>
+
+<div class="timeline">
+
+<div class="event">
+<div class="year">1993</div>
+<h2>HTML 诞生</h2>
+
+<span class="tag">开放标准</span>
+<span class="tag">文本超链接</span>
+
+<p>
+
+Tim Berners-Lee 创建 HTML，
+目标是描述网页内容，而不是控制复杂布局。
+
+最初版本只有十几个标签。
+
+</p>
+
+</div>
+
+<div class="event">
+
+<div class="year">1996-2005</div>
+
+<h2>Flash（最大的挑战者）</h2>
+
+<span class="tag">动画</span>
+<span class="tag">游戏</span>
+<span class="tag">视频</span>
+
+<p>
+
+Adobe Flash 几乎建立了一个"第二互联网"。
+
+网站首页、小游戏、在线视频、广告、
+甚至整个网站都可以完全不用 HTML 编写。
+
+很多人认为：
+未来浏览器只负责运行 Flash。
+
+</p>
+
+<p>
+
+<strong>失败原因：</strong>
+
+<ul>
+<li>无法很好支持移动设备</li>
+<li>耗电严重</li>
+<li>安全漏洞频繁</li>
+<li>SEO 极差</li>
+<li>苹果拒绝支持 Flash</li>
+<li>HTML5 视频和 Canvas 出现</li>
+</ul>
+
+</p>
+
+</div>
+
+<div class="event">
+
+<div class="year">1998</div>
+
+<h2>XML + XHTML</h2>
+
+<span class="tag">严格语法</span>
+
+<p>
+
+W3C 曾希望 XHTML 取代 HTML。
+
+HTML 被重新定义为 XML 文档，
+要求：
+
+<code>&lt;br /&gt;</code>
+
+所有标签必须闭合。
+
+语法必须100%正确。
+
+</p>
+
+<p>
+
+但是现实中网页很容易出现语法错误，
+浏览器兼容困难。
+
+最终 XHTML 基本退出历史舞台，
+HTML5 放弃了 XML 的严格要求。
+
+</p>
+
+</div>
+
+<div class="event">
+
+<div class="year">2000-2012</div>
+
+<h2>Silverlight</h2>
+
+<span class="tag">微软</span>
+
+<p>
+
+微软推出 Silverlight，
+目标是与 Flash 竞争。
+
+它支持：
+
+<ul>
+<li>C#</li>
+<li>.NET</li>
+<li>高清视频</li>
+<li>RIA（富互联网应用）</li>
+</ul>
+
+Netflix 最初大量采用 Silverlight。
+
+</p>
+
+<p>
+
+后来由于 HTML5 普及，
+Silverlight 于2021正式停止支持。
+
+</p>
+
+</div>
+
+<div class="event">
+
+<div class="year">2004-2015</div>
+
+<h2>Java Applet</h2>
+
+<span class="tag">Java</span>
+
+<p>
+
+Oracle（Sun）希望浏览器直接运行 Java。
+
+理论上：
+
+浏览器只需要一个 JVM，
+网页就能变成桌面应用。
+
+</p>
+
+<p>
+
+由于：
+
+<ul>
+<li>启动慢</li>
+<li>安全问题严重</li>
+<li>插件安装复杂</li>
+<li>用户体验差</li>
+</ul>
+
+最终退出历史。
+
+</p>
+
+</div>
+
+<div class="event">
+
+<div class="year">2007</div>
+
+<h2>移动互联网革命</h2>
+
+<span class="tag">iPhone</span>
+
+<p>
+
+苹果宣布：
+
+<strong>iPhone 不支持 Flash。</strong>
+
+Steve Jobs 后来发表著名文章：
+
+"Thoughts on Flash"
+
+指出：
+
+HTML5 才是未来。
+
+这一决定成为 Flash 衰落的重要转折点。
+
+</p>
+
+</div>
+
+<div class="event">
+
+<div class="year">2008-至今</div>
+
+<h2>HTML5 反击</h2>
+
+<span class="tag">Canvas</span>
+<span class="tag">Video</span>
+<span class="tag">SVG</span>
+
+<p>
+
+HTML5 新增：
+
+<ul>
+<li>&lt;video&gt;</li>
+<li>&lt;audio&gt;</li>
+<li>Canvas</li>
+<li>WebSocket</li>
+<li>WebGL</li>
+<li>LocalStorage</li>
+<li>WebRTC</li>
+</ul>
+
+这些能力逐渐取代 Flash、
+Silverlight、
+Java Applet。
+
+</p>
+
+</div>
+
+<div class="event">
+
+<div class="year">2015</div>
+
+<h2>Electron 与 Web App</h2>
+
+<span class="tag">桌面应用</span>
+
+<p>
+
+Electron 并没有挑战 HTML，
+而是反过来让 HTML 成为桌面应用开发语言。
+
+VSCode、
+
+Discord、
+
+Slack、
+
+Figma（部分）
+
+都大量使用 HTML + CSS + JavaScript。
+
+HTML 的地位反而进一步增强。
+
+</p>
+
+</div>
+
+<div class="event">
+
+<div class="year">2017-至今</div>
+
+<h2>WebAssembly（WASM）</h2>
+
+<span class="tag">高性能</span>
+
+<p>
+
+很多人认为：
+
+真正挑战 HTML 的不是另一种页面格式，
+
+而是：
+
+<strong>WebAssembly</strong>
+
+它允许：
+
+C++
+
+Rust
+
+Go
+
+C#
+
+直接运行于浏览器。
+
+</p>
+
+<p>
+
+但需要注意：
+
+WASM 并不能渲染页面。
+
+真正负责页面结构的仍然是 HTML。
+
+因此它更像是 HTML 的"CPU"，
+
+而不是 HTML 的替代品。
+
+</p>
+
+</div>
+
+<div class="highlight">
+
+<h2>为什么 HTML 一直没有被替代？</h2>
+
+<ul>
+
+<li>开放标准（Open Standard）</li>
+
+<li>任何浏览器都支持</li>
+
+<li>无需安装插件</li>
+
+<li>SEO 友好</li>
+
+<li>可访问性（Accessibility）优秀</li>
+
+<li>跨平台</li>
+
+<li>持续演化（HTML5）</li>
+
+<li>拥有整个 Web 生态支持</li>
+
+</ul>
+
+</div>
+
+<table>
+
+<tr>
+
+<th>挑战者</th>
+
+<th>主要优势</th>
+
+<th>最终结果</th>
+
+</tr>
+
+<tr>
+
+<td>Flash</td>
+
+<td>动画、视频、游戏</td>
+
+<td>被 HTML5 全面取代</td>
+
+</tr>
+
+<tr>
+
+<td>XHTML</td>
+
+<td>严格 XML 规范</td>
+
+<td>被 HTML5 放弃</td>
+
+</tr>
+
+<tr>
+
+<td>Silverlight</td>
+
+<td>RIA 富互联网应用</td>
+
+<td>停止维护</td>
+
+</tr>
+
+<tr>
+
+<td>Java Applet</td>
+
+<td>浏览器运行 Java</td>
+
+<td>退出历史</td>
+
+</tr>
+
+<tr>
+
+<td>WebAssembly</td>
+
+<td>高性能计算</td>
+
+<td>成为 HTML 的补充</td>
+
+</tr>
+
+<tr>
+
+<td>Electron</td>
+
+<td>HTML 开发桌面软件</td>
+
+<td>加强 HTML 地位</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+
+<h2>总结</h2>
+
+<p>
+
+互联网历史上真正挑战 HTML 地位的技术主要有：
+
+Flash、XHTML、Silverlight、Java Applet，以及近年的 WebAssembly。
+
+其中前四者都试图<strong>替代 HTML 作为网页内容的主要承载方式</strong>，最终均因开放性、兼容性、安全性、移动互联网趋势或生态不足而失败。
+
+WebAssembly 则代表了另一条路线：它并不替代 HTML，而是负责高性能计算，与 HTML、CSS 和 JavaScript 协同工作。如今，HTML 已从最初的文档标记语言演化为现代 Web 的核心基础设施，其生态不断扩展，至今仍没有真正意义上的替代者。
+
+</p>
+
+</footer>
+
+</body>
+</html>
