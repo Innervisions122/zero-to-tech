@@ -1,8 +1,19 @@
-ignore?!.md
+# dependencies
+node_modules/
 
-node_modules
+# next.js
+.next/
+out/
 
-dist
+# production
+build/
+dist/
 
-backend/.venv
-backend/__pycache__/
+# editor
+.vscode/*
+!.vscode/extensions.json
+
+# misc
+.DS_Store
+*.log
+.env*
