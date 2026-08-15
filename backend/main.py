@@ -1,10 +1,16 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_methods=["GET", "POST"],
+)
 
 profile = {
-    "heroTitle": "关于我",
+    "heroTitle": "关于我(backend)",
     "heroSubtitle": "项目，创意，灵感，心得，我的作品",
     "featuredWork": {
     "kicker": "作品",
